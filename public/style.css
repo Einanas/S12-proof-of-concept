@@ -1,8 +1,25 @@
 :root {
-  --primary-orange: #f7a100;
-  --primary-black: #333333;
+  /* 5 Primaire kleuren */
   --primary-white: #ffffff;
-  --primary-blue: #0071b3;
-  --hover-blue: #0a4669;
-  --primary-grey: #e6f2f7;
+  --primary-weborange: #f7a100;
+  --primary-regentblue: #e6f2f7;
+  --primary-lochmara: #0071b3;
+  --primary-mineshaft: #333333;  
+  /* 10 Secundaire kleuren */
+  --secundary-darkerorange: #de9000;
+  --secundary-casablanca: #f8b73e;
+  --secundary-saffronmango: #f8c463;
+  --secundary-cedar: #53241b;
+  --secundary-bahamablue: #006199;
+  --secundary-curiousblue: #2c81b3;
+  --secundary-steelblue: #478bb3;
+  --secundary-malibu: #60c5f8;
+  --secundary-silvertree: #66ba96;
+  --secundary-petiteorchid: #e09199;
+  /* 5 Grijstinten */
+  --grijstint-gallery: #ededed;
+  --grijstint-silver: #cccccc;
+  --grijstint-silverchalice: #999999;
+  --grijstint-dovegray: #666666;
+  --grijstint-mineshaft: #333333;
 }
