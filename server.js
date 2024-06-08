@@ -47,6 +47,8 @@ app.get('/', function(request, response) {
 app.get('/lijsten', function(request, response) {
   // fetchJson('https://fdnd-agency.directus.app/items/f_list/' + request.params.id + '?fields=*.*.*,houses.f_houses_id,houses.f_houses_id')
   // .then((apiData),
-  response.render('lijsten.ejs')
+  response.render('lijsten.ejs'
+    // {data: apiData.data}
+  )
 });
 // )});
