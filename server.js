@@ -41,12 +41,51 @@ const apiFeedback = `${apiUrl}f_feedback`;
 
 app.get('/', function(request, response) {
   fetchJson('https://fdnd-agency.directus.app/items/f_houses')
-  response.render('index.ejs')
+  response.render('index')
 });
 
-app.get('/lijsten', function(request, response) {
-  // fetchJson('https://fdnd-agency.directus.app/items/f_list/' + request.params.id + '?fields=*.*.*,houses.f_houses_id,houses.f_houses_id')
-  // .then((apiData),
-  response.render('lijsten.ejs')
-});
-// )});
+// app.get("/lijsten", async function (request, response) {
+//   const housesPromise = fetchJson(apiHouse);
+//   const listPromise = fetchJson(apiList);
+//   console.log(listPromise)
+
+//   const [houses, lists] = await Promise.all([housesPromise, listPromise]);
+//   console.log("houses:", houses);
+
+
+//   response.render("lijsten", {
+//     houses: houses.data,
+//     lists: lists.data
+//   });
+// });
+
+
+
+app.get('/lijsten', function (request, response) {
+  fetchJson('https://fdnd-agency.directus.app/items/f_houses/') 
+    
+    .then((apiData) => {
+      // lijsten naar lijsten.ejs {
+      response.render('lijsten.ejs', {
+        // apiHouse:apihouse naar houses:apiData.data.
+        // "houses" is the name that you will use in your html to call the data
+        // "apiData.data" is the data that you got from the fetch function on line 65 
+        // and the reason you add ".data" at the end of apiData is because data is the 
+        // container-name of the actual data that you need 
+        houses: apiData.data
+      })  
+      console.log(apiData.data)
+      // console.log(apiData.houses) 
+      // response.redirect(303, '/')
+  })
+ })
+
+//  app.get('/house', function (request, response) {
+//   fetchJson('https://fdnd-agency.directus.app/items/f_houses')
+//   .then((apiData) => {
+//       console.log(apiData.data)
+//       response.render('lijsten', {
+//         data: apiData.data
+//       })
+// });
+// })

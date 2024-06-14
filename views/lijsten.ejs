@@ -6,13 +6,27 @@
       <span></span>
       <span></span>
       <span></span>
-      <img src="/public/02-funda-Blue.jpg" alt="">
+      <img src="public/assets/logo/02-funda-Blue.jpg" alt="funda-logo dat terug linkt naar de home pagina">
     </nav>
     <nav class="nav2">
       naam
-      <!-- <img src="https://fdnd-agency.directus.app/assets/" alt=""> -->
+      <img src="https://fdnd-agency.directus.app/assets/" alt="">                       
     </nav>
 </header>
+
+
+
+<!-- <nav>
+  <label class="logo">Funda</label>
+  <ul>
+    <li><a href="#">home</a></li>
+    <li><a href="#">favorieten</a></li>
+    <li><a href="#">lijsten</a></li>
+    <li><a href="#">profiel</a></li>
+  </ul>
+</nav> -->
+
+
 
 <section class="sectie1">
   <h1>lijsten</h1>
@@ -30,27 +44,47 @@
   </article>
   <form method="post" action="" class="lijst-knopje">
     <button>
-      <p> (svg) Maak een lijst</p>
+      <svg class="plus" xmlns="http://www.w3.org/2000/svg" 
+        xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" 
+        width="30" height="auto" viewBox="0 0 256 256" 
+        xml:space="preserve"></svg> 
+      <p class="button-lijst">Maak een lijst</p>
     </button>
   </form>
 </section>
 
 <section class="sectie2">
-  
+  <% houses.forEach(house => { %>
   <div class="container">
-    <div class="img">
-      <!-- <img src="" alt="" class="detail-image"> -->
-    </div>
-    <div class="detail-info">
-      <ul>
-        <ol>huisprijs</ol>
-        <ol>makelaar</ol>
-        <ol>oppervlakte</ol>
-      </ul>
-    </div>
+    <picture class="img">
+      <source srcset="https://fdnd-agency.directus.app/assets/<%= house.poster_image %>?format=avif" type="image/avif">
+      <source srcset="https://fdnd-agency.directus.app/assets/<%= house.poster_image %>?format=webp" type="image/webp">
+      <img src="https://fdnd-agency.directus.app/assets/<%= house.poster_image %>" loading="lazy" height="200" width="250">
+    </picture>      
+    <ul class="detail-info">
+      <ol><%= house.street %></ol>
+      <ol><%= house.house_nr %></ol>  
+      <ol><%= house.rooms %></ol>
+      <ol><%= house.agent %></ol>
+      <ol><%= house.price %></ol>
+    </ul>
   </div>
+<%  }) %>
+  <!-- <div class="container">
+
+    <div class="img">
+      <picture>
+        <source srcset="https://fdnd-agency.directus.app/assets/?format=avif" type="image/avif">
+        <source srcset="https://fdnd-agency.directus.app/assets/?format=webp" type="image/webp">
+        <img class="image-size" src="https://fdnd-agency.directus.app/assets/" loading="lazy" width=" height="">
+        </picture>
+    </div>
+    <ul class="detail-info">
+    </ul>
+  </div> -->
 
 </section>
+
 
 
 </main>    
