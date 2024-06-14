@@ -9,10 +9,10 @@
       <img src="public/assets/logo/02-funda-Blue.jpg" alt="funda-logo dat terug linkt naar de home pagina">
     </nav>
     <nav class="nav2">
-      naam
+      username
       <img src="https://fdnd-agency.directus.app/assets/" alt="">                       
     </nav>
-</header>
+  </header>
 
 
 
@@ -30,19 +30,19 @@
 
 <section class="sectie1">
   <h1>lijsten</h1>
-  <article>
+  <button class="listbutton">
     <img src="" alt="" class="lijst-foto">
     <p>Lorem, ipsum dolor sit</p>
-  </article>
-  <article>
+  </button>
+  <button class="listbutton">
     <img src="" alt="">
     <p>Lorem, ipsum dolor sit</p>
-  </article>
-  <article>
+  </button>
+  <button class="listbutton">
     <img src="" alt="">
     <p>Lorem, ipsum dolor sit</p>
-  </article>
-  <form method="post" action="" class="lijst-knopje">
+  </button>
+  <form method="post" class="createname">
     <button>
       <svg class="plus" xmlns="http://www.w3.org/2000/svg" 
         xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" 
@@ -51,6 +51,21 @@
       <p class="button-lijst">Maak een lijst</p>
     </button>
   </form>
+  <form method="post" class="inputlist">
+    <label class="createlist">
+      <p>Geef je lijst een naam</p>
+      <input type="text" name="listname" placeholder="Lijst naam">
+      <button class="create">Maak aan</button>
+      <button class="cancel">annuleren</button>
+    </label>
+  </form>
+  <div class="succes">
+    <p>U heeft "..." aangemaakt.</p>
+    <p>Wilt u huizen toevoegen? 
+      <a href="#">Ja</a> <!-- redirect to home page -->
+      <a href="#">Nee</a>
+    </p>
+  </div>
 </section>
 
 <section class="sectie2">
@@ -62,11 +77,11 @@
       <img src="https://fdnd-agency.directus.app/assets/<%= house.poster_image %>" loading="lazy" height="200" width="250">
     </picture>      
     <ul class="detail-info">
-      <ol><%= house.street %></ol>
-      <ol><%= house.house_nr %></ol>  
-      <ol><%= house.rooms %></ol>
-      <ol><%= house.agent %></ol>
-      <ol><%= house.price %></ol>
+      <ol><p>Straat:</p><%= house.street %></ol>
+      <ol><p>Huisnummer:</p><%= house.house_nr %></ol>  
+      <ol><p>Kamers:</p><%= house.rooms %></ol>
+      <ol><p>Makelaar:</p><%= house.agent %></ol>
+      <ol><p>Prijs:</p><%= house.price %></ol>
     </ul>
   </div>
 <%  }) %>

@@ -97,7 +97,7 @@ span {
   background-color: var(--primary-mineshaft);
   width: auto;
   height: 400px;
-  /* overflow: auto; */
+  overflow: auto;
   justify-content: center;
   align-items: center;
   display: grid;
@@ -169,6 +169,26 @@ button {
 .button-lijst {
   align-self: center;
 }
+
+.inputlist {
+  height: 150px;
+  width: 280px;
+  background-color: var(--primary-white);
+}
+.create {
+  width: 80px;
+}
+.cancel {
+  width: 80px;
+}
+
+.succes {
+  height: 80px;
+  width: 280px;
+  background-color: var(--primary-white);
+}
+
+
 
 .sectie2 {
   background-color: var(--primary-white);
