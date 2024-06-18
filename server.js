@@ -68,7 +68,7 @@ app.get('/lijsten', function (request, response) {
       // lijsten naar lijsten.ejs {
       response.render('lijsten.ejs', {
         // apiHouse:apihouse naar houses:apiData.data.
-        // "houses" is the name that you will use in your html to call the data
+        // "houses" is the name that you will use in your html to call the data.
         // "apiData.data" is the data that you got from the fetch function on line 65 
         // and the reason you add ".data" at the end of apiData is because data is the 
         // container-name of the actual data that you need 
