@@ -1,0 +1,35 @@
+<%- include('./partials/head') %>
+
+<header>
+  navigatie werk
+  <nav>funda tang</nav>
+</header>
+
+<h1>Huizen</h1>
+<!-- <a href="/index">terug naar home</a> -->
+<h2>
+    <!-- title van elke boek -->
+    <a href="/detail/<%=houses.id%>">
+      <%= houses.city %>
+    </a>
+</h2>
+
+  <section>
+    <% houses.forEach(house => { %>
+    <!-- <div class="container"> -->
+      <picture class="img">
+        <source srcset="https://fdnd-agency.directus.app/assets/<%= house.poster_image %>?format=avif" type="image/avif">
+        <source srcset="https://fdnd-agency.directus.app/assets/<%= house.poster_image %>?format=webp" type="image/webp">
+        <img src="https://fdnd-agency.directus.app/assets/<%= house.poster_image %>" loading="lazy" height="200" width="250">
+      </picture>      
+      <ul class="detail-info">
+        <ol><a href="/detail<%= house.id %>"><p>Straat:</p><%= house.street %></a></ol>
+        <ol><p>Huisnummer:</p><%= house.house_nr %></ol>  
+        <ol><p>Kamers:</p><%= house.rooms %></ol>
+        <ol><p>Makelaar:</p><%= house.agent %></ol>
+        <ol><p>Prijs:</p><%= house.price %></ol>
+      </ul>
+    <!-- </div> -->
+  <%  }) %>
+  </section>
+<%- include('./partials/foot') %>

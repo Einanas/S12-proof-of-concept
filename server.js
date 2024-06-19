@@ -34,21 +34,45 @@ const apiList = `${apiUrl}f_list`;
 const apiUsers = `${apiUrl}f_users`;
 const apiFeedback = `${apiUrl}f_feedback`;
 
-// https://fdnd-agency.directus.app/admin/content/f_houses
-// https://fdnd-agency.directus.app/admin/content/f_list
-// https://fdnd-agency.directus.app/admin/content/f_users
-// https://fdnd-agency.directus.app/admin/content/f_feedback
-
 app.get('/', function(request, response) {
   fetchJson('https://fdnd-agency.directus.app/items/f_houses')
-  response.render('index.ejs')
+  response.render('index')
 });
 
-app.get('/lijsten', function(request, response) {
-  // fetchJson('https://fdnd-agency.directus.app/items/f_list/' + request.params.id + '?fields=*.*.*,houses.f_houses_id,houses.f_houses_id')
-  // .then((apiData),
-  response.render('lijsten.ejs'
-    // {data: apiData.data}
-  )
-});
-// )});
+app.get('/huizen', function (request, response) {
+  fetchJson('https://fdnd-agency.directus.app/items/f_houses/') 
+    
+    .then((apiData) => {
+      // lijsten naar lijsten.ejs {
+      response.render('huizen.ejs', {
+        // apiHouse:apihouse naar houses:apiData.data.
+        // "houses" is the name that you will use in your html to call the data.
+        // "apiData.data" is the data that you got from the fetch function on line 65 
+        // and the reason you add ".data" at the end of apiData is because data is the 
+        // container-name of the actual data that you need 
+        houses: apiData.data
+      })  
+      console.log(apiData.data)
+      // console.log(apiData.houses) 
+      // response.redirect(303, '/')
+  })
+ })
+
+ app.get('/detail:id', function (request, response) {
+  fetchJson('https://fdnd-agency.directus.app/items/f_houses/') 
+    
+    .then((apiData) => {
+      // lijsten naar lijsten.ejs {
+      response.render('detail.ejs', {
+        // apiHouse:apihouse naar houses:apiData.data.
+        // "houses" is the name that you will use in your html to call the data.
+        // "apiData.data" is the data that you got from the fetch function on line 65 
+        // and the reason you add ".data" at the end of apiData is because data is the 
+        // container-name of the actual data that you need 
+        houses: apiData.data
+      })  
+      console.log(apiData.data)
+      // console.log(apiData.houses) 
+      // response.redirect(303, '/')
+  })
+ })

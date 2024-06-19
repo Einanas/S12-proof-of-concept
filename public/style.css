@@ -23,3 +23,47 @@
   --grijstint-dovegray: #666666;
   --grijstint-mineshaft: #333333;
 }
+
+@font-face {
+  font-family: proxima-nova, sans-serif;
+  src: url(assets/._ProximaNova-Black_1553558671[2250].ttf);
+}
+
+/* algemeen */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  font-family: proxima-nova, sans-serif;
+  grid-template-rows:auto;
+  grid-template-columns: 15% 70% 15%;
+  background-color: var(--primary-white);
+}
+
+/* navigatie */
+header {
+  height: 80px;
+  width: auto;
+  background-color: var(--primary-weborange);
+}
+
+nav {
+  background-color: palevioletred;
+}
+
+h1 {
+  background-color: red;
+}
+
+section {
+  /* background-color: #66ba96; */
+  grid-column: 2 / 3;
+  width: 700px;
+  height: 200px;
+  margin: 0px 0px 16px;
+  padding: 0px 0px 16px;
+  border-color: hsl(var(--neutral-20, 0 0% 90%) / var(--tw-border-opacity));
+}
+
