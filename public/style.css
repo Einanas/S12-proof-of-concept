@@ -44,26 +44,16 @@ main {
 
 /* navigatie */
 header {
-  height: 80px;
+  /* height: 60px; */
+  height: 3.75rem;
   width: auto;
   background-color: var(--primary-weborange);
+  box-sizing: border-box;
+  display: flex;
 }
 
-nav {
-  background-color: palevioletred;
-}
-
-h1 {
-  background-color: red;
-}
-
-section {
-  /* background-color: #66ba96; */
-  grid-column: 2 / 3;
-  width: 700px;
-  height: 200px;
-  margin: 0px 0px 16px;
-  padding: 0px 0px 16px;
-  border-color: hsl(var(--neutral-20, 0 0% 90%) / var(--tw-border-opacity));
+.logo {
+  width: 100px;
+  /* height: 80px; */
 }
 
