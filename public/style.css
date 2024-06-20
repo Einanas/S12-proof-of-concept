@@ -148,15 +148,6 @@ button:nth-of-type(3) {
   border-radius: 5px;
 }
 
-/* .lijst-foto {
-  border-color: rgb(244, 119, 140);
-  height: 20px;
-  width: 20px;
-  justify-content: left;
-  align-items: start;
-  display: flex;
-} */
-
 button:nth-of-type(4) {
   width: 300px;
   height: 45px;
@@ -188,8 +179,6 @@ button:nth-of-type(4) {
   background-color: var(--primary-white);
 }
 
-
-
 .sectie2 {
   background-color: var(--primary-white);
   width: auto;
@@ -217,7 +206,6 @@ button:nth-of-type(4) {
   background-color: #66ba96;
   justify-content: center;
   align-items: center;
-  
 }
 
 .detail-info {
@@ -228,5 +216,4 @@ button:nth-of-type(4) {
   align-items: center;
   display: flex;
   flex-direction: column;
-
 }
