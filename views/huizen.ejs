@@ -34,9 +34,7 @@
   </nav>
 </header>
 
-<!-- <a href="/index">terug naar home</a> -->
 <h2>
-  
     <!-- title van elke boek -->
     <a href="/detail/<%=houses.id%>">
       <%= houses.city %>
@@ -45,7 +43,6 @@
 
   <section>
     <% houses.forEach(house => { %>
-    <!-- <div class="container"> -->
       <picture class="img">
         <source srcset="https://fdnd-agency.directus.app/assets/<%= house.poster_image %>?format=avif" type="image/avif">
         <source srcset="https://fdnd-agency.directus.app/assets/<%= house.poster_image %>?format=webp" type="image/webp">
@@ -58,7 +55,6 @@
         <ol><p>Makelaar:</p><%= house.agent %></ol>
         <ol><p>Prijs:</p><%= house.price %></ol>
       </ul>
-    <!-- </div> -->
   <%  }) %>
   </section>
 <%- include('./partials/foot') %>
